@@ -1,0 +1,1 @@
+{"version":3,"sources":["settings.js"],"names":[],"mappings":";;;;;AAKA,MAAM,CAAC,OAAO,GAAG;AACf,IAAE,EAAE,KAAK;AACT,MAAI,EAAE,2BAA2B;CAClC,CAAC","file":"settings-compiled.js","sourcesContent":["/**\r\n * @author Disciple_D\r\n * @since 2015/12/11 11:00\r\n */\r\n\r\nmodule.exports = {\r\n  db: 'nba',\r\n  host: 'mongodb://localhost:27017'\r\n};"]}

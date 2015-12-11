@@ -1,0 +1,16 @@
+node_modules/
+npm-debug.log
+
+.idea
+*.sublime-project
+*.sublime-workspace
+report-results.html
+
+# preview style file
+src/assets/css/
+
+# dist dir
+dist/
+
+# eslint report dir
+eslint/
