@@ -6,11 +6,5 @@ npm-debug.log
 *.sublime-workspace
 report-results.html
 
-# preview style file
-src/assets/css/
-
-# dist dir
-dist/
-
-# eslint report dir
-eslint/
+*-compiled.js
+*-compiled.js.map
