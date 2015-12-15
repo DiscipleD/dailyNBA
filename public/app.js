@@ -4,3 +4,16 @@
  */
 'use strict';
 
+angular.module('DailyNba', ['ui.router', 'ngMaterial'])
+  .run(routerLoader);
+
+routerLoader.$inject = ['$rootScope'];
+function routerLoader($rootScope){
+  $rootScope.$on('$stateChangeStart', function(){
+    $rootScope.loading = true;
+  });
+
+  $rootScope.$on('$viewContentLoaded', function(){
+    $rootScope.loading = false;
+  });
+}
