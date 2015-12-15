@@ -24,8 +24,11 @@ request('http://nba.hupu.com/', 'GET', 'gb2312', (err, res, body) => {
     let score = self.find('.bifen a').text().split(':');
     let homeScore = parseInt(score[0].trim());
     let awayScore = parseInt(score[1].trim());
+    let report = self.find('tr').last().find('td').first().find('a');
+    let reportTitle = report.text();
+    let reportUrl = report.attr('href');
 
-    let game = new Game(homeTeam, homeScore, awayTeam, awayScore, new Date());
+    let game = new Game(homeTeam, homeScore, awayTeam, awayScore, reportTitle, reportUrl, new Date());
 
     gameList.push(game);
 

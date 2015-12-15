@@ -2,9 +2,9 @@
  * @author Disciple_D
  * @since 2015/12/09 11:00
  */
-
-var req = require('request');
-var iconv = require('iconv-lite');
+'use strict';
+const req = require('request');
+const iconv = require('iconv-lite');
 
 function throwError(){
   throw new Error('miss param.');

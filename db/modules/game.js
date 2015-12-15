@@ -6,11 +6,13 @@
 const db = require('../db');
 
 // need change to Class in ES6
-function Game(home, homeScore, away, awayScore, date){
+function Game(home, homeScore, away, awayScore, reportTitle, reportUrl, date){
   this.homeTeam = home;
   this.homeScore = homeScore;
   this.awayTeam = away;
   this.awayScore = awayScore;
+  this.reportTitle = reportTitle;
+  this.reportUrl = reportUrl;
   this.gameDate = date;
 }
 
@@ -22,6 +24,8 @@ Game.prototype.save = function(cb){
     homeScore: this.homeScore,
     awayTeam: this.awayTeam,
     awayScore: this.awayScore,
+    reportTitle: this.reportTitle,
+    reportUrl: this.reportUrl,
     gameDate: this.gameDate
   };
 
