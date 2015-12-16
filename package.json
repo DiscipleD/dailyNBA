@@ -13,6 +13,9 @@
     "mongoose": "~4.3.0",
     "request": "~2.27.0",
 
+    "supervisor": "~0.9.0",
+    "pm2": "~0.15.0",
+
     "express": "~4.13.0",
     "ejs": "~2.3.4",
 
@@ -29,6 +32,8 @@
     "angular-material": "~1.0.0"
   },
   "scripts": {
-    "start": "node bin/www"
+    "start": "pm2 start bin/www",
+    "stop": "pm2 stop bin/www",
+    "dev": "supervisor bin/www"
   }
 }
