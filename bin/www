@@ -88,3 +88,9 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+/**
+ * Run cron job
+ */
+var cronJob = require('../crawler/cronJob');
+cronJob.start();
