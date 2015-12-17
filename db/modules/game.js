@@ -6,6 +6,8 @@
 const db = require('../db');
 
 // need change to Class in ES6
+function Game(){}
+
 function Game(home, homeScore, away, awayScore, reportTitle, reportUrl, date){
   this.homeTeam = home;
   this.homeScore = homeScore;
@@ -17,6 +19,28 @@ function Game(home, homeScore, away, awayScore, reportTitle, reportUrl, date){
 }
 
 module.exports = Game;
+
+Game.prototype.find = function(param, cb){
+  if (db){
+    db('games', (err, db, collection) => {
+      if (err){
+        db.close();
+        return cb(err);
+      }
+
+      collection.find(param).toArray((err, gameArray) => {
+
+        db.close();
+
+        console.log('Mongo Db connection is closed.');
+
+        if (err) return cb(err);
+
+        cb(null, gameArray);
+      });
+    });
+  }
+};
 
 Game.prototype.save = function(cb){
   let game = {
@@ -50,6 +74,5 @@ Game.prototype.save = function(cb){
       });
     });
   }
-
 };
 
