@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Daily NBA</title>
-    <link rel="stylesheet" href="components/angular-material/angular-material.css"/>
+  <meta charset="UTF-8">
+  <title>Daily NBA</title>
+  <link rel="stylesheet" href="components/angular-material/angular-material.css"/>
 </head>
 
 <body class="layout-row" ng-app="DailyNba">
 
 <h1>home page</h1>
 
-<div ng-show="loading" layout="row" layout-sm="column" layout-align="space-around">
-<ui-view></ui-view>
+<div ng-show="loading" layout="row" layout-sm="column" layout-align="space-around"></div>
+<section ui-view></section>
 
 <script src="components/angular/angular.js"></script>
 <script src="components/angular-ui-router/angular-ui-router.js"></script>
@@ -20,5 +20,7 @@
 <script src="components/angular-material/angular-material.js"></script>
 
 <script src="app.js"></script>
+<script src="config/routerConfig.js"></script>
+<script src="javascripts/home.js"></script>
 </body>
 </html>

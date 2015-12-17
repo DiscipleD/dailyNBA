@@ -1,0 +1,8 @@
+<ul>
+  <li ng-repeat="game in homeCtrl.gameList track by $index">
+    <span flex="1" ng-bind="game.homeTeam.name"></span>
+    <span flex="1" ng-bind="game.homeScore"></span> ：<span flex="1" ng-bind="game.awayScore"></span>
+    <span flex="1" ng-bind="game.awayTeam.name"></span>
+    <div flex><a ng-href="game.reportUrl" ng-bind="game.reportTitle"></a></div>
+  </li>
+</ul>
