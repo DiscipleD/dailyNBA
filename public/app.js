@@ -25,12 +25,10 @@
   /**
    * ui-router configuration
    */
-  routerConfig.$inject = ['$urlRouterProvider', '$stateProvider', 'RouterConfigProvider'];
-  function routerConfig($urlRouterProvider, $stateProvider, RouterConfigProvider){
+  routerConfig.$inject = ['$urlRouterProvider', '$stateProvider', 'RouterConfig'];
+  function routerConfig($urlRouterProvider, $stateProvider, RouterConfig){
     $urlRouterProvider.otherwise('/');
-    //console.log(RouterConfigProvider);
-    //console.log(RouterConfigProvider.routerConfig);
-    //console.log(RouterConfigProvider.$get());
-    $stateProvider.state('home', RouterConfigProvider.$get().home);
+
+    $stateProvider.state('home', RouterConfig.home);
   }
 })(window.angular);

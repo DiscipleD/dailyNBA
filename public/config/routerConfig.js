@@ -5,18 +5,11 @@
 'use strict';
 (function (angular, undefined) {
   angular.module('DailyNba.config', [])
-    .provider('RouterConfig', routerConfiguration);
-
-  function routerConfiguration(){
-    this.routerConfig = {
+    .constant('RouterConfig', {
       home: {
         url: '/',
         templateUrl: './templates/home.html',
         controller: 'HomeCtrl as homeCtrl'
       }
-    };
-    this.$get = function (){
-      return this.routerConfig;
-    }
-  }
+    });
 })(window.angular);
